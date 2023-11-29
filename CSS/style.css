@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans+JP:wght@600&family=Poiret+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Yanone+Kaffeesatz:wght@300;400;600;700&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Poiret One', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+ */
+
+ :root{
+  --grey: #221d1d;
+  --orange: #ffb300;
+  --red: #e41313;
+ }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  transition: all .3s cubic-bezier(.16, .8, .62, 1.52);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color:var(--orange);
+
+}
+
+/* The  Calculator body design*/
+
+.calculator{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 18rem;
+  border: 1px solid black;
+  background: black;
+  overflow: hidden;
+  border-radius:1.5rem;
+
+}
+
+/* The Calculator body Design ends  */
+/* The Display UI Starts */
+input{
+  text-align: end;
+  background: black;
+  border: none;
+  color:#fff;
+  font-weight: 700;
+  outline: none;
+  width:100%;
+}
+#input-display{
+  font-size: 2rem;
+  padding: 5rem 1.2rem 0 1.2rem;
+  height: 7rem;
+  border-radius: 20%;
+  margin-bottom: .8rem;
+ 
+}
+#input-calc{
+  font-family: Noto Sans JP;
+  font-size:1.1rem; 
+  padding:1.6rem 1.2rem;
+  background:var(--grey);
+  height:3rem;
+  letter-spacing: .1rem;
+  margin-bottom: .2rem;
+}
+/* Display UI ends*/
+
+
+/* The Button UI starts */
+.container{
+  width:100%;
+  display: grid;
+  font-weight: 700;
+  grid-template-columns: repeat(4,1fr);
+  gap:.3rem;
+  grid-template-areas:
+  "negate clear delete divide"
+  "seven eight nine multiply "
+  "four five six subtract"
+  "one two three add"
+  "one equals zero decimal";
+}
+
+.grid-item{
+  border:2px solid black;
+  background: #392e2e;
+  text-align: center;
+  color:white;
+  font-size: 1.4rem;
+  border-radius:8%;
+  padding: 1.2rem;
+}
+
+
+
+.grid-item:last-of-type{
+  grid-column:-1/3;
+}
+
+.color-red{
+  background:#141313;
+  color:var(--red)
+}
+.color-orange{
+  background:#141313;
+  color:var(--orange);
+}
+
+/* Define the specific grid areas for each button */
+.calculator .negate { --button-area: negate; }
+.calculator .clear { --button-area: clear; }
+.calculator .delete {--button-area: delete; }
+.calculator .multiply{ --button-area: multiply; }
+.calculator .seven { --button-area: seven; }
+.calculator .eight { --button-area: eight; }
+.calculator .add { --button-area: add; }
+.calculator .three { --button-area: three; }
+.calculator .two { --button-area: two; }
+
+.calculator .negate,
+.calculator .clear,
+.calculator .delete,
+.calculator .multiply,
+.calculator .seven,
+.calculator .eight,
+.calculator .add,
+.calculator .three,
+.calculator .two {
+  grid-area: var(--button-area);
+}
+
+button{
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+button:hover{
+  cursor: pointer;
+  background: black;
+}
+
+/* The Button UI ends */
+
+/* Media query */

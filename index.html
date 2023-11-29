@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <meta name="viewport" co                                                                                                                                      ntent="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="calculator">
+    <input type="text" Value="0" id="input-display" readonly>
+    <input type="text" Value="0" id="input-calc" class="input-calc" readonly>
+
+    <div class="container">
+      <button data-operation class="grid-item divide color-orange" id="divide">&#247;</button>
+      <button data-delete class="grid-item delete color-red" id="delete"><i class="fa-solid fa-delete-left"></i></button>
+      <button data-all-clear  class="grid-item clear color-red" id="clear">C</button>
+      <button data-operation class="grid-item negate color-red" id="negate">+/-</button>
+      <button data-operation class="grid-item multiply color-orange" id="multiply">x</button>
+      <button data-number class="grid-item nine" id="nine">9</button>
+      <button data-number class="grid-item eight" id="eight">8</button>
+      <button data-number class="grid-item seven" id="seven">7</button>
+      <button data-number class="grid-item six" id="six">6</button>
+      <button data-number class="grid-item five" id="five">5</button>
+      <button data-number class="grid-item four" id="four">4</button>
+      <button data-operation class="grid-item subtract color-orange" id="subtract">-</button>
+      <button data-operation class="grid-item add color-orange" id="add">+</button>
+      <button data-number class="grid-item three" id="three">3</button>
+      <button data-number class="grid-item two" id="two">2</button>
+      <button data-number class="grid-item one" id="one">1</button>
+      <button data-number class="grid-item zero" id="zero">0</button>
+      <button data-number class="grid-item decimal" id="decimal">.</button>
+      <button data-equals class="grid-item equals color-orange">=</button>
+    </div>
+    </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
+
+</html>
